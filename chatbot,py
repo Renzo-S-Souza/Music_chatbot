@@ -29,3 +29,4 @@ def iniciar_chat():
             print("Não entendi, me diga uma das bandas acima.")
             print("Ou, digite 'sair' para encerrar.")
 iniciar_chat()
+#Fiz um comentário pra testes#
