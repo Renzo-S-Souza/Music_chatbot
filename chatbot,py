@@ -1,0 +1,31 @@
+def estilos_musicais(escolha_de_estilo):
+    links = {
+        "triste": "https://www.onlinegdb.com/", #Radiohead#
+        "irritado": "https://www.onlinegdb.com/", #Iron Maiden#
+        "alegre": "https://www.onlinegdb.com/", #Queen#
+        "assustado": "https://www.onlinegdb.com/", #linkin park#
+        "enojado": "https://www.onlinegdb.com/" #hole#
+        }
+        
+    return links.get(escolha_de_estilo.lower(),"Desculpe, mas não temos indicação pro seu caso.")
+
+
+def iniciar_chat():
+    print("Olá!")
+    print("Me diga, como você está se sentindo hoje?")
+    print("Dessas emoções, qual define o que você sente melhor?: Triste, irritado, alegre, assustado ou enojado. ")
+    
+    while True:
+        usuario = input("Você: ").lower()
+        if usuario == "sair":
+            print("Até logo!")
+            break
+        if usuario in {"triste", "irritado", "alegre", "assustado", "enojado"}:
+            link = estilos_musicais(usuario)
+            print(f'Aqui vai um album da banda que escolheu: {usuario}')
+            print(f"link{link}")
+            print("Mais alguma coisa?")
+        else:
+            print("Não entendi, me diga uma das bandas acima.")
+            print("Ou, digite 'sair' para encerrar.")
+iniciar_chat()
